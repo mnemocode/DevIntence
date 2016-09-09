@@ -1,14 +1,16 @@
 package com.example.mnemoplace.devintence.ui.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import com.example.mnemoplace.devintence.R;
+import com.example.mnemoplace.devintence.utils.ConstantManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-private static final String TAG = "Main Activity";
+    private static final String TAG = ConstantManager.TAG_PREFIX + "Main Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,4 +48,17 @@ private static final String TAG = "Main Activity";
         super.onDestroy();
         Log.d(TAG, "onDestroy");
     }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d(TAG, "onSaveInstanceState");
+    }
 }
+
